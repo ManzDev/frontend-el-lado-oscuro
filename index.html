@@ -845,7 +845,7 @@ gulp.task('css', function() {
     }
     
     document.addEventListener('impress:stepenter', function(e, s = slides, f = factor) {
-      var currentStep = document.querySelector('.active').id;
+      var currentStep = document.querySelector('.active[id]').id;
       var current = (s.indexOf(currentStep) * 100) / s.length;
       
       var video = document.querySelector('#' + currentStep + ' video');
@@ -855,9 +855,10 @@ gulp.task('css', function() {
     }, false);
     
     document.addEventListener('impress:stepleave', function(e, s = slides, f = factor) {
-      var currentStep = document.querySelector('.active').id;
+      var currentStep = document.querySelector('.active[id]').id;
       var current = (s.indexOf(currentStep) * 100) / s.length;
     
+      //console.log(currentStep, s.indexOf(currentStep), current, s.length);
       // Lightsaber control
       setFill(current);
     }, false);
