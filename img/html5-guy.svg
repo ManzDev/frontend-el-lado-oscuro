@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="358" height="457" viewBox="0 0 358 457">
+<style>
+svg {
+  display:block;
+  width:360px;
+  margin:auto;
+  border-bottom:1px solid #999;
+}
+
+.arm, .leg {
+  fill: none;
+  stroke:#AAA;
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
+
+.shield { fill: #e34f26 }
+.inner-shield { fill: #ef652a }
+.left-five { fill: #ebebeb }
+.right-five { fill: #fff }
+</style>
+    <title>HTML5 Guy</title>
+    <path class="leg left-leg" d="M214.334 287.698l44.89 64.406-34.481 100.839h31.878" />
+    <path class="leg right-leg" d="M139.631 287.698l-44.89 64.406 34.481 100.839H97.344" />
+    <g class="body">
+      <path class="arm left-arm" d="M304.037 82.887l49.443 58.551-12.36 109.947" />
+      <path class="arm right-arm" d="M53.61 82.887L4.168 141.438l12.361 109.947" />
+      <path class="shield" d="M63.979 282.831L38.769 0h277.298l-25.209 282.831-113.747 31.972" />
+      <path class="inner-shield" d="M177.726 290.21L269.338 265l21.52-242.25H177.726" />
+      <path class="left-five" d="M177.726 127.889h-46.114l-3.074-35.662h49.188V57.796H90.417l.615 9.223 8.608 95.916h78.086zm0 90.383h-.615l-38.736-10.453-2.459-27.668h-34.432l4.304 54.722 71.323 19.675h.615z" />
+      <path class="right-five" d="M177.11 127.889v35.046h43.04l-4.304 44.884-38.735 10.453v36.276l71.323-19.675.614-6.149 7.993-91.612 1.23-9.223h-9.837zm0-70.093v34.431h84.235l.615-7.378 1.845-17.83.615-9.223z" />
+    </g>
+</svg>
