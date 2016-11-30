@@ -134,17 +134,23 @@
             <p>Firefox</p>
             <p class="orange">Mozilla</p>
           </div>
-          <div class="item substep gray"><img src="img/ie.png" alt="Internet Explorer">
-            <p>IE</p>
-            <p class="blue">Microsoft</p>
+          <div class="item">
+            <div class="substep gray"><img src="img/death-star.png" alt="Internet Explorer Death Star" class="hidden">
+              <p>IE</p>
+              <p class="blue">Microsoft</p>
+            </div>
+            <div style="transform:translate(-5px,-265px); position:relative;z-index:4" class="substep gray"><img src="img/ie.png" alt="Internet Explorer"></div>
           </div>
           <div class="item substep gray"><img src="img/edge.png" alt="Edge">
             <p>Edge</p>
             <p class="blue">Microsoft</p>
           </div>
-          <div class="item substep gray"><img src="img/safari.png" alt="Safari">
-            <p>Safari</p>
-            <p>Apple</p>
+          <div class="item">
+            <div class="substep gray"><img src="img/death-star-2.png" alt="Safari Death Star 2" class="hidden">
+              <p>Safari</p>
+              <p>Apple</p>
+            </div>
+            <div style="transform:translate(0, -265px);position:relative;z-index:4" class="substep gray"><img src="img/safari.png" alt="Safari"></div>
           </div>
           <div class="item substep gray"><img src="img/opera.png" alt="Opera">
             <p>Opera</p>
@@ -247,6 +253,18 @@
     <div id="caniuse" data-x="4100" data-y="4000" data-rotate="-90" class="step">
       <div class="hidden"><a href="http://caniuse.com/"><img src="img/caniuse.png" alt="Can I Use"></a>
         <p class="medium">Can I use: ¿Qué puedo usar en <span class="red">X</span> navegador?</p>
+      </div>
+    </div>
+    <div id="caniuse-filter-css" data-x="4600" data-y="4000" data-rotate="0" class="step">
+      <div class="hidden">
+        <h5>CanIUse: Filtros CSS</h5>
+        <p class="small grey">Soporte de filtros CSS en diferentes navegadores</p><img src="img/caniuse-filter-css.png" alt="CanIUse: Filter CSS">
+      </div>
+    </div>
+    <div id="caniuse-grid-css" data-x="4900" data-y="4000" data-rotate="90" class="step">
+      <div class="hidden">
+        <h5>CanIUse: Grid CSS (<span class="grey">IE & Edge!!</span>)</h5>
+        <p class="small grey">Captura de pantalla histórica</p><img src="img/caniuse-grid-css.png" alt="CanIUse: Grid CSS">
       </div>
     </div>
     <div id="preprocesadores" data-x="4200" data-y="5000" class="step">
@@ -429,9 +447,9 @@ ul
         <div class="item"><br>
           <ul class="medium">
             <li>ECMAScript (ES)</li>
+            <li>¿Crossbrowser?         </li>
             <li>↑ Complejidad</li>
             <li>↑ Trabajo</li>
-            <li>Soporte</li>
           </ul>
         </div>
       </div>
@@ -483,7 +501,13 @@ ul
         </ul>
       </div>
     </div>
-    <div id="minify-css-js-html" data-x="7000" data-y="2500" data-scale="0.5" class="step">
+    <div id="minifiers" data-x="7000" data-y="2575" class="step">
+      <div>
+        <h3>Minifiers</h3>
+        <p class="medium">Reducir tamaño (<span class="grey">condensar espacio innecesario</span>)</p><img src="img/preprocess-minify.png" alt="Minificadores (Minify HTML, JS, CSS)" style="width:800px">
+      </div>
+    </div>
+    <div id="minify-css-js-html" data-x="7000" data-y="3000" data-scale="0.5" class="step">
       <div>
         <h5>CleanCSS <a href="https://goalsmashers.github.io/css-minification-benchmark/" class="xsmall">CSS Minify Benchmark</a></h5>
         <pre class="command-line language-bash"><code>cleancss index.css -o index.min.css</code></pre>
@@ -491,12 +515,6 @@ ul
         <pre class="command-line language-bash"><code>uglifyjs events.js -o events.min.js</code></pre>
         <h5>HTMLmin</h5>
         <pre class="command-line language-bash"><code>htmlmin index.prev.html -o index.html</code></pre>
-      </div>
-    </div>
-    <div id="minifiers" data-x="7000" data-y="3000" class="step">
-      <div>
-        <h3>Minifiers</h3>
-        <p class="medium">Reducir tamaño (<span class="grey">condensar espacio innecesario</span>)</p><img src="img/preprocess-minify.png" alt="Minificadores (Minify HTML, JS, CSS)" style="width:800px">
       </div>
     </div>
     <div id="postcss" data-x="8300" data-y="3000" class="step">
@@ -644,9 +662,18 @@ font-weight:400;color:red;z-index:1} /* 79 bytes */
     </div>
     <div id="svgo" data-x="9300" data-y="1400" class="step">
       <div class="hidden">
-        <h4 class="white">SVGO</h4>
-        <p class="small grey">SVG Optimizer</p>
-        <pre class="command-line language-bash"><code>svgo logo.svg --pretty -p 2 -o logo.min.svg <br><br>Done in 203 ms! <br>184.5 KiB - <span class="green">73%</span> = 49.8 KiB</code></pre>
+        <div class="flex">
+          <div class="item">
+            <h4 class="white">SVGO</h4>
+            <p class="small grey">SVG Optimizer</p>
+          </div>
+          <div class="item">
+            <video loop src="img/holy-shit.mp4" alt="Holy Shit!" class="photo"></video>
+            <!--img.photo(src="img/holy-shit.gif", alt="Holy shit!")-->
+          </div>
+        </div>
+        <pre class="command-line language-bash"><code>svgo logo.svg -p 2 -o logo.min.svg <br><br>Done in 85 ms! <br>8.14 KiB - <span class="green">81%</span> = 1.5 KiB</code></pre>
+        <h5>PNG/<span class="red">39KB</span> · SVG/<span class="orange">8KB</span> · SVG optimizado/<span class="green">1.5KB</span></h5>
       </div>
     </div>
     <div id="atom-scheme" data-x="9300" data-y="2800" class="step">
@@ -867,7 +894,7 @@ gulp.task('css', function() {
       if (event.keyCode == 36)  // home
         impress().goto(0);
       if (event.keyCode == 35)  // end
-        impress().goto('overview');
+        impress().goto('ending');
     });
   </script>
 </body>
