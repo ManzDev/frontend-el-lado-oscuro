@@ -118,7 +118,7 @@
         <p>Es todo un éxito, y a lo largo de los siguientes años se evoluciona separando la <span class="blue">presentación</span> del <span class="orange">contenido</span></p><img src="img/css3.png" alt="CSS3"><img src="img/html5.png" alt="HTML5">
       </div>
     </div>
-    <div id="problemas" data-x="3200" data-y="2800" data-rotate="0" data-scale="1" class="step">
+    <div id="problemas" data-x="3200" data-y="2700" data-rotate="0" data-scale="1" class="step">
       <div class="hidden">
         <p>Sin embargo, las cosas no son nunca tan fáciles...</p>
       </div>
@@ -177,28 +177,89 @@
       </div>
     </div>
     <div id="modulo-animaciones" data-x="3200" data-y="4300" data-rotate-y="90" class="step">
-      <div class="hidden"><a href="https://codepen.io/manz/pen/xOGNRP"><img src="img/animation-css.png" alt="Animation CSS"></a>
+      <div><a href="https://codepen.io/manz/pen/xOGNRP"><img src="img/animation-css.png" alt="Animation CSS"></a>
         <pre><code class="language-css">@keyframes facemove {
-  0%, 100% { transform: translate(0, 0) }
+  0% { transform: translate(0, 0) }
   50% { transform: translate(20px, 5px) }
-}
 .faceanim {
-  animation: facemove 1s ease 0.1s 5 alternate;
+  animation: facemove 1s ease 
+             0.1s 5 alternate;
 }
 </code></pre>
       </div>
     </div>
-    <div id="modulo-flex" data-x="5200" data-y="4300" data-rotate-y="90" class="step">
+    <div id="modulo-animaciones-ejemplo1" data-x="3900" data-y="4300" data-rotate-y="90" class="step">
+      <div class="hidden">
+        <div id="quagmire"><img id="face" src="img/quagmire-head.png" alt="Quagmire face"></div>
+      </div>
+    </div>
+    <div id="modulo-flex" data-x="5200" data-y="4300" data-rotate-y="0" data-z="0" class="step">
       <div class="hidden"><a href="https://codepen.io/manz/pen/BzoYKb"><img src="img/flexbox.png" alt="Flexbox CSS"></a>
+        <div class="flex">
+          <div class="item">
+            <pre><code class="language-css">#contenedor {
+  width:500px;
+  display:flex;
+}</code></pre>
+          </div>
+          <div class="item">
+            <pre><code class="language-css">#contenedor div {
+  width:75px;
+  height:50px;
+}</code></pre>
+          </div>
+        </div>
+        <div id="falcon">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div id="modulo-flex-ejemplo1" data-x="5200" data-y="4300" data-z="100" class="step">
+      <div class="hidden">
         <pre><code class="language-css">#contenedor {
   width:500px;
   display:flex;
-}
-#contenedor div {
-  width:75px;
-  height:50px;
-}
-</code></pre>
+}      </code></pre>
+        <div id="falcon">
+          <div id="luke"></div>
+          <div id="leia"></div>
+          <div id="solo"></div>
+          <div id="chewy"></div>
+        </div>
+      </div>
+    </div>
+    <div id="modulo-flex-ejemplo2" data-x="5200" data-y="4300" data-z="200" class="step">
+      <div class="hidden">
+        <pre><code class="language-css">#contenedor {
+  width:500px;
+  display:flex;
+  justify-content:center;
+}      </code></pre>
+        <div id="falcon" class="jcc">
+          <div id="luke"></div>
+          <div id="leia"></div>
+          <div id="solo"></div>
+          <div id="chewy"></div>
+        </div>
+      </div>
+    </div>
+    <div id="modulo-flex-ejemplo3" data-x="5200" data-y="4300" data-z="300" class="step">
+      <div class="hidden">
+        <pre><code class="language-css">#contenedor {
+  width:500px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}       </code></pre>
+        <div id="falcon" class="jcc aic">
+          <div id="luke"></div>
+          <div id="leia"></div>
+          <div id="solo"></div>
+          <div id="chewy"> </div>
+        </div>
       </div>
     </div>
     <div id="css-specs" data-x="3200" data-y="4800" data-rotate="-90" class="step">
