@@ -1,0 +1,1009 @@
+// output:../index.html
+doctype html
+html(lang="es")
+head
+  // Metadatos
+  title Front-end: El lado oscuro
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=1024")
+  meta(name="description", content="Front-end: En los últimos años el mundo del front-end ha avanzado y se ha complicado muchísimo, ¿cómo vencer ese lado oscuro?")
+  meta(name="author", content="Manz")
+
+  // Relaciones
+  //link(rel="stylesheet",href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic")
+  link(rel="stylesheet", href="css/impress.base.min.css")
+  link(rel="stylesheet", href="css/darkgrey.theme.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css")
+  link(rel="icon", href="img/favicon.png")
+body
+  // Fallback (navegadores no compatibles)
+  div.fallback-message
+    p Tu navegador <b>no soporta HTML5</b>. Para una buena experiencia, por favor, utiliza un navegador moderno compatible con HTML5.
+
+  // Comenzamos impress.js
+  div#impress
+
+    // Cada .step es un slide
+    div#start.step.darth(data-x="0", data-y="0")
+      h1 Front-end
+      h4 El lado oscuro
+      div(style="margin-top:2.5em")
+        p.medium Por #[span.green @Manz]
+        p.medium(style="line-height:10%")
+          a(href="http://twitter.com/Manz") twitter.com/Manz
+
+    div#farago.step.center(data-x="1000", data-y="0")
+      p Hace mucho, mucho tiempo... en un Internet muy lejano...
+
+    div#backandfront.step.center(data-x="1000", data-y="1000", data-z="-1000")
+      div.hidden
+        p #[span.red Back-end] y #[span.green Front-end] eran un sólo ente.<br> Sin embargo, siempre se percibía de la misma forma...
+
+    div#seafrontend.step(data-x="2000", data-y="0")
+      img.photo.hidden(src="img/sea-frontend.jpg", alt="Front-end perspective (Original image: Timo)")
+
+    div#seabackend.step(data-x="2000", data-y="425")
+      img.photo.hidden(src="img/sea-backend.jpg", alt="Back-end perspective (Original image: Timo)")
+
+    div#front-html.step(data-x="2000", data-y="1800")
+      p La tecnología principal del front-end es #[strong.orange HTML5].
+
+    div#html4.step(data-x="3000", data-y="0")
+      img.hidden(src="img/html4.png", alt="HTML4 Logo")
+      div.hidden
+        p En los 90 quedaron etiquetas como #[code &lt;marquee&gt;] ó #[code &lt;blink&gt;]
+        p.small.grey (con las que hoy en día #[a(href="https://encrypted.google.com/search?q=blink+tag") Google] aún bromea)
+
+    div#xhtml.step(data-x="3500", data-y="0")
+      img.hidden(src="img/xhtml.png", alt="XHTML Logo")
+      div.hidden
+        p Más tarde, llega #[code XHTML].
+        p.small.grey (Más fácil para máquinas, pero más difícil para humanos)
+
+    div#html5.step(data-x="4000", data-y="0")
+      img.hidden(src="img/html5.png", alt="HTML5 Logo")
+      div.hidden
+        p Finalmente se impone #[strong.orange HTML5].
+        p.small.grey (Se añaden capacidades multimedia, web semántica, etc...)
+
+    div#html5-mmedia.step(data-x="5000", data-y="500")
+      p Por ejemplo, es muy sencillo crear componentes multimedia...
+      p.small.grey (usando directamente video/audio)
+      video.photo(controls, src="img/dog.mp4", onClick="this.play()")
+      div
+        h6 GIF/#[span.red 32MB] MP4/#[span.green 3MB]
+
+    div#with-flash.step(data-x="5000", data-y="500", data-rotate-x="-90")
+      div.hidden
+        p.medium ...y que antes sólo eran posibles con #[span.red Flash]
+        img(src="img/photo-flash.jpg", alt="Photo without flash")
+
+    div#html5-semantic.step(data-x="5000", data-y="2000")
+      p Usar etiquetas semánticas para mejorar significado:
+      pre.hidden
+        code.language-html.
+          &lt;div id="cabecera"&gt;&lt;/div&gt;
+          &lt;div id="contenido"&gt;&lt;/div&gt;
+          &lt;div id="piepagina"&gt;&lt;/div&gt;
+      div.hidden
+        p.small.grey Problemas: div no semático, clases subjetivas (idioma, poco descriptiva, etc...)
+
+    div#html5-semantic2.step(data-x="5000", data-y="2050")
+      pre.hidden
+        code.language-html
+          &lt;header&gt;&lt;/header&gt;
+          &lt;div id="contenido"&gt;&lt;/div&gt;
+          &lt;footer&gt;&lt;/footer&gt;
+      p.medium.hidden Orientado para máquinas #[span.grey (Google, IoT, Skynet...)]
+
+    div#css3.step(data-x="3000", data-y="2000")
+      img(src="img/css3.png", alt="CSS3")
+      p Por otro lado, #[code.blue CSS] se encarga de la presentación (aspecto visual).
+
+    div#iecss.step(data-x="3000", data-y="500")
+      div.hidden
+        p Definición de CSS
+        video.photo(loop, src="img/css-ie.mp4")
+          //img.photo(src="img/css-ie.gif") // fallback
+        img.transleft(src="img/ie.png")
+
+    div#safaricss.step(data-x="3000", data-y="1200")
+      div.hidden
+        p Definición de CSS #[span.blue (Edición 2016)]
+        video.photo(loop, src="img/css-safari.mp4")
+          //img.photo(src="img/css-safari.gif") // fallback
+        img.transleft(src="img/safari.png")
+
+    div#css-birthday.step(data-x="3100", data-y="1900", data-rotate="-90", data-scale="0.2")
+      div.hidden
+        p Nace en 1996, como un invento del director técnico del navegador #[span.red Opera]
+
+    div#css-evolution.step(data-x="3200", data-y="2000", data-rotate="-180", data-scale="0.3")
+      div.hidden
+        p Es todo un éxito, y a lo largo de los siguientes años se evoluciona separando la #[span.blue presentación] del #[span.orange contenido]
+        img(src="img/css3.png", alt="CSS3")
+        img(src="img/html5.png", alt="HTML5")
+
+    div#problemas.step(data-x="3200", data-y="2700", data-rotate="0", data-scale="1")
+      div.hidden
+        p Sin embargo, las cosas no son nunca tan fáciles...
+
+    div#navegadores.step(data-x="3200", data-y="3000")
+      div
+        div.small.grey.flex.center
+          .item.substep.gray
+            img(src="img/chrome.png", alt="Chrome")
+            p Chrome
+            p.blue Google
+          .item.substep.gray
+            img(src="img/firefox.png", alt="Firefox")
+            p Firefox
+            p.orange Mozilla
+          .item
+            div.substep.gray
+              img.hidden(src="img/death-star.png", alt="Internet Explorer Death Star")
+              p IE
+              p.blue Microsoft
+            div.substep.gray(style="transform:translate(-5px,-265px); position:relative;z-index:4")
+              img(src="img/ie.png", alt="Internet Explorer")              
+          .item.substep.gray
+            img(src="img/edge.png", alt="Edge")
+            p Edge
+            p.blue Microsoft
+          .item
+            div.substep.gray
+              img.hidden(src="img/death-star-2.png", alt="Safari Death Star 2")
+              p Safari
+              p Apple
+            div.substep.gray(style="transform:translate(0, -265px);position:relative;z-index:4")
+              img(src="img/safari.png", alt="Safari")
+          .item.substep.gray
+            img(src="img/opera.png", alt="Opera")
+            p Opera
+            p.red Opera
+
+    div#vendor-nav.step(data-x="3200", data-y="3285")
+      p.hidden Cada compañía tiene sus propias prioridades y se centra en lo que considera oportuno.
+      p.medium.grey.hidden Y no todas implementan mejoras al mismo ritmo...
+
+    div#w3c.step(data-x="3200", data-y="3700")
+      div.hidden
+        img(src="img/w3c.png", alt="W3C")
+        p El consorcio #[span.blue W3C] (1994) genera y promociona estándares (HTML, CSS, SVG...) para conseguir cierta neutralidad...
+        p.medium.grey (Separar #[span.green avance tecnológico] de #[span.red poder] de navegadores líderes)
+
+    div#modulos-css.step(data-x="3200", data-y="4100")
+      div.hidden
+        h4 Cambio de #[span.red estrategia]
+        p Nuevas funcionalidades en #[span.blue módulos] que añaden características sobre el CSS base...
+        p.medium.grey (Más fácil de añadir soporte en los navegadores)
+
+    div#modulo-animaciones.step(data-x="3200", data-y="4300", data-rotate-y="90")
+      div
+        a(href="https://codepen.io/manz/pen/xOGNRP")
+          img(src="img/animation-css.png", alt="Animation CSS")      
+        pre
+          code.language-css.
+            @keyframes facemove {
+              0% { transform: translate(0, 0) }
+              50% { transform: translate(20px, 5px) }
+            }
+            .face {
+              animation: facemove 1s ease 
+                         0.1s 5 alternate;
+            }
+            
+    div#modulo-animaciones-ejemplo1.step(data-x="3900", data-y="4300", data-rotate-y="90")
+      div.hidden
+        div#quagmire
+          img#face(src="img/quagmire-head.png", alt="Quagmire face")
+
+    div#modulo-flex.step(data-x="5200", data-y="4300", data-rotate-y="0", data-z="0")
+      div.hidden
+        a(href="https://codepen.io/manz/pen/BzoYKb")
+          img(src="img/flexbox.png", alt="Flexbox CSS")
+        div.flex
+          div.item
+            pre
+              code.language-css.
+                #falcon {
+                  width:500px;
+                  display:flex;
+                }
+          div.item
+            pre
+              code.language-css.
+                #falcon div {
+                  width:75px;
+                  height:50px;
+                }
+        div#falcon
+          div #luke
+          div #leia
+          div #solo
+          div #chewy
+    
+    div#modulo-flex-ejemplo1.step(data-x="5200", data-y="4300", data-z="100")
+      div.hidden
+        pre
+          code.language-css.
+            #falcon {
+              width:500px;
+              display:flex;
+            }      
+        div#falcon
+          div #luke
+          div #leia
+          div #solo
+          div #chewy
+          
+    div#modulo-flex-ejemplo2.step(data-x="5200", data-y="4300", data-z="200")
+      div.hidden
+        pre
+          code.language-css.
+            #falcon {
+              width:500px;
+              display:flex;
+              justify-content:center;
+            }      
+        div#falcon.jcc
+          div #luke
+          div #leia
+          div #solo
+          div #chewy
+          
+    div#modulo-flex-ejemplo3.step(data-x="5200", data-y="4300", data-z="300")
+      div.hidden
+        pre
+          code.language-css.
+            #falcon {
+              width:500px;
+              display:flex;
+              justify-content:center;
+              align-items:center;
+            }       
+        div#falcon.jcc.aic
+          div #luke
+          div #leia
+          div #solo
+          div #chewy
+
+    div#modulo-flex-ejemplo4.step(data-x="5200", data-y="4300", data-z="400")
+      div.hidden
+        pre.xsmall
+          code.language-css.
+            #luke { background:linear-gradient(#8b6e5a 25%, 
+                                               #f5e7e5 25%) }
+            #leia { background:linear-gradient(#331f24 25%, 
+                                               #fff6e6 25%) }
+            #solo { background:linear-gradient(to left, #190f17 25%, 
+                                       #f0dbd1 25%,75%, #190f17 75%) }
+            #chewy { background:linear-gradient(-25deg, #5e473c 50%, 
+                                       #f6f1f3 50%,55%, #5e473c 55%) }
+        div#falcon.jcc.aic
+          div#luke
+          div#leia
+          div#solo
+          div#chewy
+
+    div#css-specs.step(data-x="3200", data-y="4800", data-rotate="-90")
+      div.hidden
+        img(src="img/css-specs.png", alt="CSS3 Specs")
+
+    div#css-vendor-prefixes.step(data-x="3200", data-y="6200", data-rotate-y="90")
+      div.hidden
+        p Para mantener un orden, aparecen los #[span.green vendor prefixes], diferenciando las características finales de las que aún están en desarrollo o pruebas.
+
+    div#w3c-explained.step(data-x="3200", data-y="6800", data-rotate-y="90")
+      img(src="img/w3c-explained.png", alt="W3C Explained")
+
+    div#css-vendor-prefixes-example.step(data-x="3200", data-y="7600", data-rotate-y="90")
+      div.hidden
+        h3 Ejemplo
+        p.grey Código estrictamente necesario
+        pre
+          code.language-css.
+            .container {
+              display:flex;      /* Usa módulo Flexbox CSS */
+              min-height:100px;
+              background:grey;
+            }
+
+    div#css-vendor-prefixes-example2.step(data-x="3200", data-y="7600", data-rotate-y="90")
+      div.hidden
+        h3 Ejemplo
+        p (con #[span.green vendor prefixes] = retrocompatibilidad)
+        pre
+          code.language-css.
+            .container {
+              display:-webkit-box;    /* v. antigua (2009) */
+              display:-webkit-flex;   /* v. actual (2011) */
+              display:-ms-flexbox;    /* v. antigua (IE) */
+              display:flex;           /* Prop. definitiva */
+              min-height:100px;
+              background:grey;
+            }
+
+    div#css-vendor-prefixes-example3.step(data-x="3200", data-y="7600", data-rotate-y="90")
+      div.hidden
+        h3 Ejemplo
+        p Esto tiene una serie de #[span.red desventajas]: #[span.grey discrepancias, «verbose», modernización...]
+        pre
+          code.language-css.
+            .example {
+              -webkit-filter: contrast(1.25);
+                      filter: contrast(1.25);
+              background: -webkit-linear-gradient(blue, red);
+              background:         linear-gradient(blue, red);
+            }
+
+    div#caniuse.step(data-x="4100", data-y="4000", data-rotate="-90")
+      div.hidden
+        a(href="http://caniuse.com/")
+          img(src="img/caniuse.png", alt="Can I Use")
+        p.medium Can I use: ¿Qué puedo usar en #[span.red X] navegador?
+    
+    div#caniuse-filter-css.step(data-x="4600", data-y="4000", data-rotate="0")
+      div.hidden
+        h5 CanIUse: Filtros CSS
+        p.small.grey Soporte de filtros CSS en diferentes navegadores
+        img(src="img/caniuse-filter-css.png", alt="CanIUse: Filter CSS")
+        
+    div#caniuse-grid-css.step(data-x="4900", data-y="4000", data-rotate="90")
+      div.hidden
+        h5 CanIUse: Grid CSS (#[span.grey IE & Edge!!])
+        p.small.grey Captura de pantalla histórica
+        img(src="img/caniuse-grid-css.png", alt="CanIUse: Grid CSS")
+
+    div#preprocesadores.step(data-x="4200", data-y="5000")
+      h3 Preprocesadores
+      img(src="img/pug.png", alt="Pug")
+      img(src="img/less.png", alt="LESS")
+      img(src="img/babel.png", alt="Babel")
+
+    div#pug-html5.step(data-x="4200", data-y="5500")
+      h3 Pug → HTML5
+      p (Pug, antiguamente #[span.green Jade])
+      img(src="img/pug.png", alt="Pug")
+      img(src="img/arrow.png", alt="->")
+      img(src="img/html5.png", alt="HTML5", style="width:200px")
+
+    div#pug-ejemplo1.step(data-x="4200", data-y="6000")
+      div.hidden
+        h3 Pug
+        p.grey Etiquetas, clases, IDS y atributos
+        pre
+          code.language-jade.
+            div#elementid
+              div.class1.class2
+                a(href="http://emezeta.com/") Enlace
+
+    div#pug-ejemplo1b.step(data-x="4200", data-y="6000")
+      div.hidden
+        h3 HTML5
+        pre
+          code.language-html.
+            &lt;div id="elementid"&gt;
+              &lt;div class="class1 class2"&gt;
+                &lt;a href="http://emezeta.com/"&gt;Enlace&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+    div#pug-ejemplo2.step(data-x="4200", data-y="6000")
+      div.hidden
+        h3 Pug
+        p.grey Variables y condicionales
+        pre
+          code.language-jade.
+            - var data = { user: 'Gandalf' }
+            #welcome
+              if data.user
+                h2= data.user
+              else
+                h2.blue Anónimo
+
+    div#pug-ejemplo2b.step(data-x="4200", data-y="6000")
+      div.hidden
+        h3 HTML5
+        pre
+          code.language-html.
+            &lt;div id="welcome"&gt;
+              &lt;h2&gt;Gandalf&lt;/h2&gt;
+            &lt;/div&gt;
+
+    div#pug-ejemplo3.step(data-x="4200", data-y="6000")
+      div.hidden
+        h3 Pug
+        p.grey Arrays y bucles
+        pre
+          code.language-jade.
+            - var array = [ 'uno', 'dos', 'tres' ]
+            ul
+              each i in array
+                li= i
+
+    div#pug-ejemplo3b.step(data-x="4200", data-y="6000")
+      div.hidden
+        h3 HTML5
+        pre
+          code.language-html.
+            &lt;ul&gt;
+              &lt;li&gt;uno&lt;/li&gt;
+              &lt;li&gt;dos&lt;/li&gt;
+              &lt;li&gt;tres&lt;/li&gt;
+            &lt;/ul&gt;
+
+    div#pug-css3.step(data-x="5200", data-y="5500")
+      h3 LESS → CSS3
+      p (#[span.blue Preprocesador] CSS)
+      img(src="img/less.png", alt="LESS")
+      img(src="img/arrow.png", alt="->")
+      img(src="img/css3.png", alt="CSS3", style="width:200px")
+
+    div#less-ejemplo1.step(data-x="5200", data-y="6200")
+      div.hidden
+        h3 LESS
+        p.grey Anidación, ámbitos y añadidos
+        pre
+          code.language-less.
+            #contenido {
+              background:black;
+              .destacado, .info {
+                color:white;
+                &:hover { background:red }
+              }
+            }
+            .destacado {
+              background:blue;
+            }
+
+    div#less-ejemplo1b.step(data-x="5200", data-y="6200")
+      div.hidden
+        h3 CSS3
+        pre
+          code.language-css.
+            #contenido {
+              background: black;
+            }
+            #contenido .destacado, #contenido .info {
+              color: white;
+            }
+            #contenido .destacado:hover,
+            #contenido .info:hover { background: red }
+            .destacado {
+              background: blue;
+            }
+
+    div#less-ejemplo2.step(data-x="5200", data-y="6200")
+      div.hidden
+        h3 LESS
+        p.grey Variables y mixins simples
+        pre
+          code.language-less.
+            @filtro: grayscale(1);      // Filtro a aplicar
+
+            .simplemixin () {           // Mixin reutilizable
+              filter:@filtro;
+              -webkit-filter:@filtro;
+            }
+            .elemento {                 // Clase
+              .simplemixin;
+            }
+
+    div#less-ejemplo2b.step(data-x="5200", data-y="6200")
+      div.hidden
+        h3 CSS3
+        pre
+          code.language-css.
+            .elemento {
+              filter: grayscale(1);
+              -webkit-filter: grayscale(1);
+            }
+
+    div#less-ejemplo3.step(data-x="5200", data-y="6200")
+      div.hidden
+        div.flex
+          div.item
+            h3 LESS
+            p.small.grey Mixins paramétricos          
+            pre
+              code.language-less.
+                .mixin (@bg: #222, 
+                        @color: #FFF) {
+                  background:@bg;
+                  color:@color;
+                }
+                .clase2 {  // Paramétrico
+                  .mixin(#888, #111);
+                }
+                .clase3 {  // Clase = mixin
+                  .clase2
+                }
+          div.item
+            h3 CSS3
+            p.small.grey CSS resultante
+            pre
+              code.language-css.
+                .clase2 {
+                  background: #888888;
+                  color: #111111;
+                }
+                .clase3 {
+                  background: #888888;
+                  color: #111111;
+                }
+
+    div#htmlcssjs.step(data-x="6400", data-y="5400")
+      p ¿Y qué pasa con #[span.yellow Javascript]?
+      div.flex
+        div.item
+          video.photo(loop, src="img/html-css-js.mp4", alt="HTML, CSS, JS")
+          //img.photo(src="img/html-css-js.gif", alt="HTML, CSS, JS")   // fallback
+        div.item
+          br
+          ul.medium
+            li ECMAScript (ES)
+            li ¿Crossbrowser?         
+            li ↑ Complejidad
+            li ↑ Trabajo
+
+    div#es5-browsers.step(data-x="6400", data-y="5900", data-scale="0.5")
+      div
+        h2 ES5
+        p.grey ECMAScript5 (Dic/2009)
+        img.w135.gray(src="img/chrome.png", alt="Chrome")
+        img.w135.gray(src="img/firefox.png", alt="Firefox")
+        img.w135.gray(src="img/ie.png", alt="Internet Explorer")
+        img.w135.gray(src="img/edge.png", alt="Edge")
+        img.w135.gray(src="img/safari.png", alt="Safari")
+        img.w135.gray(src="img/opera.png", alt="Opera")
+        p.large.green #[span.small.grey CH54]99% #[span.small.grey FF50]100% #[span.small.grey IE11]99% #[span.small.grey ED14]100% #[span.small.grey SF10]98% #[span.small.grey OP41]99%
+
+    div#es6-browsers.step(data-x="6400", data-y="6200", data-scale="0.5")
+      div
+        h2 ES6
+        p.grey ECMAScript6 (Jun/2015)
+        img.w135.gray(src="img/chrome.png", alt="Chrome")
+        img.w135.gray(src="img/firefox.png", alt="Firefox")
+        img.w135.gray(src="img/ie.png", alt="Internet Explorer")
+        img.w135.gray(src="img/edge.png", alt="Edge")
+        img.w135.gray(src="img/safari.png", alt="Safari")
+        img.w135.gray(src="img/opera.png", alt="Opera")
+        p.large.green #[span.small.grey CH54]97% #[span.small.grey FF50]#[span.yellow 92%] #[span.small.grey IE11]#[span.red 11%] #[span.small.grey ED14]#[span.yellow 93%] #[span.small.grey SF10]100% #[span.small.grey OP41]97%
+
+    div#es7-browsers.step(data-x="6400", data-y="6500", data-scale="0.5")
+      div
+        h2 ES7 (2016+)
+        p.grey ECMAScript7 (En desarrollo)
+        img.w135.gray(src="img/chrome.png", alt="Chrome")
+        img.w135.gray(src="img/firefox.png", alt="Firefox")
+        img.w135.gray(src="img/ie.png", alt="Internet Explorer")
+        img.w135.gray(src="img/edge.png", alt="Edge")
+        img.w135.gray(src="img/safari.png", alt="Safari")
+        img.w135.gray(src="img/opera.png", alt="Opera")
+        p.large.orange #[span.small.grey CH54]55% #[span.small.grey FF50]50% #[span.small.grey IE11]#[span.red 4%] #[span.small.grey ED14]52% #[span.small.grey SF10]#[span.red 44%] #[span.small.grey OP41]55%
+
+    div#babel-js.step(data-x="6400", data-y="7200")
+      h3 BabelJS → JS
+      p #[span.blue Transpiler]: JS/ES6 a JS/ES5
+      img(src="img/babel.png", alt="BABELJS")
+      img(src="img/arrow.png", alt="->")
+      img(src="img/js.png", alt="JS", style="width:225px")
+
+      p.small.center
+        a.item(href="http://kangax.github.io/compat-table/es6/") ES6 Kangax Compat-Table
+
+    div#preprocess-scheme.step(data-x="7000", data-y="2000")
+      div
+        h4 Preprocesado
+        p Esquema de "compilación"
+        img(src="img/preprocess.png", alt="Preprocesadores web", style="width:500px")
+
+    div#preprocess-ventajas.step(data-x="7300", data-y="2000", data-scale="0.4")
+      div
+        h5.green Pros
+        ul.medium
+          li Flexibilidad en el código
+          li Automatización de tareas
+          li Organización y estructuración
+        h5.orange Cons
+        ul.medium
+          li Requiere preprocesamiento (complejidad)
+          li Necesidad de coherencia (discrepancias)
+
+    div#minifiers.step(data-x="7000", data-y="2575")
+      div
+        h3 Minifiers
+        p.medium Reducir tamaño (#[span.grey condensar espacio innecesario])
+        img(src="img/preprocess-minify.png", alt="Minificadores (Minify HTML, JS, CSS)", style="width:800px")
+        
+    div#minify-css-js-html.step(data-x="7000", data-y="3000", data-scale="0.5")
+      div
+        h5 CleanCSS #[a.xsmall(href="https://goalsmashers.github.io/css-minification-benchmark/") CSS Minify Benchmark]
+        pre.command-line.language-bash
+          code cleancss index.css -o index.min.css
+
+        h5 UglifyJS
+        pre.command-line.language-bash
+          code uglifyjs events.js -o events.min.js
+
+        h5 HTMLmin
+        pre.command-line.language-bash
+          code htmlmin index.prev.html -o index.html
+
+    div#postcss.step(data-x="8300", data-y="3000")
+      div
+        h3 PostCSS
+        p «Más allá de CSS»
+        img(src="img/postcss.png", alt="PostCSS")
+
+    div#postcss-autoprefixer.step(data-x="8450", data-y="2900", data-scale="0.4")
+      div
+        p Autoprefixer
+        pre.command-line.language-bash
+          code postcss -u #[span.red autoprefixer] index.css -o #[span.green output.css]
+        div.flex
+          div.item
+            pre
+              code.language-css.
+                .clase {
+                  display:flex;
+                }
+          div.item
+            pre
+              code.language-css.
+                .clase {
+                  display:-webkit-box;
+                  display:-webkit-flex;
+                  display:-ms-flexbox;
+                  display:flex;
+                }
+
+    div#postcss-plugins.step(data-x="8450", data-y="3200", data-scale="0.4")
+      div
+        p color-hex-alpha / custom-properties
+        pre.command-line.language-bash
+          code postcss -u #[span.grey (nombre_del_plugin)] index.css -o #[span.green output.css]
+        div.flex
+          div.item
+            pre
+              code.language-css.
+                :root {
+                  --color: #FF000055;
+                }
+                .clase {
+                  color: var(--color);
+                }
+          div.item
+            pre
+              code.language-css.
+                .clase {
+                  color: rgba(255, 0, 0, 0.33333);
+                }
+
+    div#postcss-cssnano.step(data-x="8450", data-y="3500", data-scale="0.4")
+      div
+        p cssnano
+        pre.command-line.language-bash
+          code postcss -u #[span.blue cssnano] index.css -o #[span.green output.css]
+        pre.xsmall
+          code.language-css.
+            .clase {
+              -webkit-border-radius:16px;     /* obsoleto */
+              border-radius:16px;
+              font-weight:normal;
+              margin: 10px 20px 10px 20px;    /* redundante */
+              font-weight:normal;             /* repetida */
+              color: rgb(255,0,0);            /* formato largo */
+              z-index:555;                    /* valor muy alto */
+            } /* 271 bytes */
+        pre.xsmall
+          code.language-css.
+            .clase{border-radius:16px;margin:10px 20px;
+            font-weight:400;color:red;z-index:1} /* 79 bytes */
+
+    div#postcss-sorting.step(data-x="8450", data-y="3800", data-scale="0.4")
+      div
+        p postcss-sorting
+        pre.command-line.language-bash
+          code postcss -u #[span.blue postcss-sorting] index.css -o #[span.green output.css]
+        div.flex
+          div.item
+            pre
+              code.language-css.
+                .button {
+                  margin:0 10px;
+                  padding:0 15px;
+                  border:1px solid #f3f3f3;
+                  border-radius:4px;
+                  background-color:#fefefe;
+                }
+          div.item
+            pre
+              code.language-css.
+                .button {
+                  padding:0 15px;
+                  margin:0 10px;
+
+                  background-color:#fefefe;
+                  border-radius:4px;
+
+                  border:1px solid #f3f3f3;
+                }
+
+    div#svg.step(data-x="9300", data-y="0")
+      div.flex.bottom
+        div.item
+          h4.white SVG
+          p.small.grey Gráficos vectoriales SVG
+          pre.xxsmall
+            code.language-html.
+              &lt;svg&gt;
+                &lt;title>HTML5 Guy&lt;/title&gt;
+                &lt;path class="leg left-leg" d="..." /&gt;
+                &lt;path class="leg right-leg" d="..." /&gt;
+                &lt;g class="body"&gt;
+                  &lt;path class="arm left-arm" d="..." /&gt;
+                  &lt;path class="arm right-arm" d="..." /&gt;
+                  &lt;path class="shield" d="..." /&gt;
+                  &lt;path class="inner-shield" d="..." /&gt;
+                  &lt;path class="left-five" d="..." /&gt;
+                  &lt;path class="right-five" d="..." /&gt;
+                &lt;/g&gt;
+              &lt;/svg&gt;
+        div.item
+          img(src="img/html5-guy.svg", alt="HTML5 Guy")
+
+    div#svganim.step(data-x="9300", data-y="800")
+      div.hidden
+        h4.white SVG Animado
+        p.small.grey Gráficos vectoriales SVG + Animaciones CSS
+        div.flex.bottom
+          div.item
+            pre.xxsmall
+              code.language-html.
+                &lt;svg&gt;
+                  &lt;style&gt;
+                    @keyframes move {
+                      0% { transform: translateY(10px) }
+                      100% { transform: translateY(50px) }
+                    }
+                    .body {
+                      animation: move 1.5s linear 
+                                 infinite alternate;
+                    }  
+                  &lt;/style&gt;
+                  ...
+                &lt;/svg&gt;
+          div.item
+            img(src="img/html5-guy-anim.svg", alt="HTML5 Guy animado")
+
+    div#svgo.step(data-x="9300", data-y="1400")
+      div.hidden
+        div.flex
+          div.item
+            h4.white SVGO
+            p.small.grey SVG Optimizer
+          div.item
+            video.photo(loop, src="img/holy-shit.mp4", alt="Holy Shit!")
+            //img.photo(src="img/holy-shit.gif", alt="Holy shit!")  // fallback
+        
+        pre.command-line.language-bash
+          code svgo logo.svg -p 2 -o logo.min.svg #[br]#[br]Done in 85 ms! #[br]8.14 KiB - #[span.green 81%] = 1.5 KiB
+        
+        h5 PNG/#[span.red 39KB] · SVG/#[span.orange 8KB] · SVG optimizado/#[span.green 1.5KB]
+
+    div#atom-scheme.step(data-x="9300", data-y="2800")
+      div
+        img.fl(src="img/atom.png", style="width:150px")
+        h2 ATOM Editor
+        h4 less-postcss-autocompile
+        p.medium.grey Convierte LESS a CSS y añade prefijos
+        div.flex
+          div.item
+            pre.xsmall
+              code.language-less.
+                // out:out.css,autoprefixer:true
+                @color: #44AA88;
+                .dark-side {
+                  background:@color;
+                  filter:contrast(0.5);
+                  color:#FFF;
+                }
+          div.item
+            pre.xsmall
+              code.language-css.
+                .dark-side {
+                  background: #44aa88;
+                  -webkit-filter: contrast(0.5);
+                          filter: contrast(0.5);
+                  color: #FFF;
+                }
+
+    div#atom-scheme2.step(data-x="9300", data-y="3400")
+      div.hidden
+        p.medium.grey Convierte LESS a CSS, añade prefijos #[span.blue y minifica]
+        pre
+          code.language-less.
+            // out:fin.min.css, compress:true, autoprefixer:true
+            .dark-side {
+              filter:brightness(0.5);
+            }
+        pre
+          code.language-css.
+            .dark-side{-webkit-filter:brightness(.5);
+            filter:brightness(.5)}
+
+    div#taskrunners.step(data-x="9300", data-y="4000", data-rotate-x="180")
+      h3 Task Runners
+      p.medium Automatizadores de tareas #[span.grey (repetitivas o tediosas)]
+      img(src="img/grunt.png", alt="Grunt")
+      img(src="img/gulpjs.png", alt="GulpJS")
+      img(src="img/broccoli.png", alt="Broccoli")
+
+    div#gruntjs.step(data-x="10500", data-y="4000", data-rotate-x="180")
+      div.flex
+        div.item
+          pre.xxsmall
+            code.language-js.
+              /* Gruntfile */
+              module.exports = function(grunt) {
+                grunt.loadNpmTasks('grunt-postcss');
+                grunt.initConfig({
+                  postcss: {
+                    options: {
+                      map: true,
+                      processors: [ require('autoprefixer')() ]
+                    },
+                    dist: {
+                      src: 'css/*.css'
+                    }
+                  }
+                }
+                grunt.registerTask('default', ['postcss:dist']);
+              });
+        div.item
+          h3 GruntJS
+          img(src="img/grunt.png", alt="Grunt")
+          ul.medium
+            li.blue Configuración
+            li.red Temp files (lento)
+            li.red «Verbose»
+
+    div#gulpjs.step(data-x="11750", data-y="4000", data-rotate-x="180")
+      div.flex
+        div.item
+          pre.xsmall
+            code.language-js.
+              /* gulpfile.js */
+              gulp.task('css', function() {
+                var postcss      = require('gulp-postcss');
+                var autoprefixer = require('autoprefixer');
+                var minifycss    = require('gulp-minify-css');
+
+                return gulp.src('./src/*.css')
+                           .pipe(postcss([ autoprefixer() ]))
+                           .pipe(minifycss())
+                           .pipe(gulp.dest('./dist'));
+              });
+        div.item
+          h3 GulpJS
+          img(src="img/gulpjs.png", alt="GulpJS")
+          ul.medium
+            li.blue Código
+            li.green Streams (rápido)
+            li.green Simple
+
+    div#gulpjs-plugins.step(data-x="11750", data-y="3000", data-rotate-x="180")
+      div.hidden
+        div.flex
+          div.item
+            img(src="img/gulpjs.png", alt="GulpJS", style="width:175px")
+          div.item
+            h3 GulpJS plugins ¹
+            p.medium ¡Hay plugins para prácticamente todo!
+        ul.medium
+          li gulp-less          #[span.grey (Preprocesa LESS a CSS)]
+          li gulp-pug           #[span.grey (Preprocesa PUG a HTML)]
+          li gulp-babel         #[span.grey (Preprocesa JS ES6 a JS ES5)]
+          li gulp-newer         #[span.grey (Procesa sólo archivos modificados)]
+
+    div#gulpjs-plugins2.step(data-x="12750", data-y="3000", data-rotate-x="180")
+      div.hidden
+        div.flex
+          div.item
+            img(src="img/gulpjs.png", alt="GulpJS", style="width:175px")
+          div.item
+            h3 GulpJS plugins ²
+            p.medium ¡...Y más aún...!
+        ul.medium
+          li gulp-run           #[span.grey (Ejecuta comando, devuelve salida)]
+          li gulp-concat        #[span.grey (Concatenar varios archivos)]
+          li gulp-webserver     #[span.grey (Montar servidor local)]
+          li gulp-image         #[span.grey (Optimizar PNG, JPG, GIF, SVG)]
+          li gulp-htmlmin       #[span.grey (Minificar HTML)]
+
+    div#gulpjs-plugins3.step(data-x="13750", data-y="3000", data-rotate-x="180")
+      div.hidden
+        div.flex
+          div.item
+            img(src="img/gulpjs.png", alt="GulpJS", style="width:175px")
+          div.item
+            h3 GulpJS plugins ³
+            p.medium ¡Y MÁS!
+        ul.medium
+          li gulp-git           #[span.grey (Usa GIT desde GulpJS)]
+          li gulp-ttf2woff2     #[span.grey (Convierte TTF a WOFF2)]
+          li gulp-yaml          #[span.grey (Convierte YAML a JSON)]
+          li gulp-ga            #[span.grey (Inyecta Google Analytics)]
+          li vinyl-ftp          #[span.grey (Sube cambios por FTP)]
+
+    div#gulpjs-automatize-all.step(data-x="14500", data-y="3000", data-rotate-x="180")
+      div.hidden.center
+        img.item(src="img/all-the-things.png", alt="Automatize all the things!")
+
+    div#gulpjs-ecosystem.step(data-x="15300", data-y="3000", data-rotate-x="180")
+      div.hidden
+        img(src="img/gulpjs-ecosystem.png", alt="Ecosistema GulpJS")
+
+    div#ending.step(data-x="15550", data-y="3000", data-rotate-x="180", data-rotate="180")
+      div.hidden
+        div.flex
+          div.item
+            img.photo(src="img/emezeta.png", alt="Emezeta.com", style="width:400px")
+          div.item
+            h4 ¡Gracias!
+
+    //div#overview.step(data-x="5800", data-y="3400", data-scale="12")  // last slide
+
+  // Sugerencia inicial
+  div.hint
+    p Pulsa <kbd>espacio</kbd> o <kbd>&#8594;</kbd> para avanzar.
+
+  div#upbar
+    div.fill(style="width:0%")
+
+  //script(src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js")  // original impress.js
+  script(src="js/impress-substep.min.js")  // impress.js with substeps (for browser slides)
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-jade.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-less.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-javascript.min.js")
+  script.
+    impress().init();
+    var fill = document.querySelector('#upbar .fill');
+    var steps = document.querySelectorAll('.step');
+    var slides = [];
+    for (i=0; i<steps.length; i++) {
+      slides[i] = steps.item(i).id;
+    }
+    var factor = 100 / (slides.length - 1);
+    function setFill(i) {
+      fill.style.width = parseInt(i) + '%';
+    }
+    
+    document.addEventListener('impress:stepenter', function(e, s = slides, f = factor) {
+      var currentStep = document.querySelector('.active[id]').id;
+      var current = (s.indexOf(currentStep) * 100) / s.length;
+      
+      var video = document.querySelector('#' + currentStep + ' video');
+      if (video)
+        video.play();
+      
+    }, false);
+
+    document.addEventListener('impress:stepleave', function(e, s = slides, f = factor) {
+      var currentStep = document.querySelector('.active[id]').id;
+      var current = (s.indexOf(currentStep) * 100) / s.length;
+
+      // Lightsaber control
+      setFill(current);
+    }, false);
+
+    window.addEventListener('keydown', function() {
+      if (event.keyCode == 36)  // home slide
+        impress().goto(0);
+      if (event.keyCode == 35)  // end slide
+        impress().goto('ending');
+    });

@@ -1,0 +1,350 @@
+// out: ../css/darkgrey.theme.min.css, autoprefixer:true, compress:true
+
+// Precarga de tipografías
+
+@font-face {
+	font-family: 'Accidental Presidency';
+	src: url('fonts/acid.eot');
+	src: url('fonts/acid.eot?#iefix') format('embedded-opentype'),
+    		url('fonts/acid.woff2') format('woff2'),
+    		url('fonts/acid.woff') format('woff'),
+    		url('fonts/acid.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Abscissa';
+	src: url('fonts/abscissa.eot');
+	src: url('fonts/abscissa.eot?#iefix') format('embedded-opentype'),
+    		url('fonts/abscissa.woff2') format('woff2'),
+    		url('fonts/abscissa.woff') format('woff'),
+    		url('fonts/abscissa.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// CSS General
+
+body {
+  font-family: 'Abscissa';
+  background: #111;
+  color: #EEE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Accidental Presidency';
+  line-height:95%;
+}
+
+h1 {
+  font-size:164px;
+}
+h2 {
+  font-size:164px;
+  color:#FFFFFF;
+  text-shadow: 0 0 5px #000
+}
+h3 {
+  font-size:112px;
+  color:#7d7d7d;
+}
+h4 {
+  font-size:92px;
+  color:#7d7d7d;
+  line-height:72px
+}
+
+/* Mensaje de sugerencia inicial  */
+.hint {
+  transition-duration:4s;
+}
+
+/* Slides */
+
+.darth {
+  background:url(../img/darthvader.svg) center right no-repeat;
+  background-size:500px;
+  height:500px;
+  padding-top:50px;
+}
+
+#navegadores img {
+  width:128px;
+  height:128px;
+}
+
+/* Lightsaber up bar */
+
+#upbar {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:20px;
+  background:#444;
+}
+
+#upbar .fill {
+  height:100%;
+  background:#fbfbfb;
+  box-shadow:-5px -5px 5px #700 inset,
+             5px 5px 5px #700 inset;
+  transition:width 1s ease;
+}
+
+/* Code base */
+
+code {
+  font-family: Consolas;
+  color:#db4c25;
+}
+
+.step img.photo {
+  border:8px solid #EEE;
+  box-shadow:4px 4px 6px #000;
+}
+
+img.small {
+  max-height:700px;
+}
+
+.hidden {
+  opacity:0.01;
+  transition:opacity 1s ease;
+  position:relative;
+  z-index:-1;
+}
+
+.active .hidden {
+  opacity:1;
+  z-index:1;
+}
+
+.center {
+  text-align:center;
+}
+
+/* Colors for header text */
+
+.orange { color:#d7450f }
+.red { color:#b92e2e }
+.blue { color:#5d73eb }
+.green { color:#21802d }
+.grey { color:#999999 }
+.white { color:#FFFFFF }
+.yellow { color:#e4e220 }
+
+a {
+  background:none;
+  color:#1d83c4;
+  text-decoration:underline;
+  text-shadow:none;
+}
+
+video.photo {
+  padding:4px;
+  background:#FFF;
+}
+
+a:visited {
+  background:none;
+  text-shadow:none;
+  color:#785cb3;
+}
+
+a:hover {
+  background:none;
+  color:#e3e116;
+  text-shadow:none;
+}
+
+.substep {
+  opacity:0.25;
+  transition:all 1s linear;
+}
+
+.substep.active {
+  opacity:1;
+}
+
+.substep.gray {
+  filter:grayscale(1) opacity(0.25);
+}
+
+.substep.gray.active {
+  filter:grayscale(0) opacity(1);
+}
+
+p {
+  line-height:100%;
+  margin:20px 0;
+}
+
+.xxsmall { font-size:22px }
+.xsmall { font-size:26px }
+.small { font-size:32px }
+.medium { font-size:38px }
+.large { font-size:42px}
+
+ul.medium {
+  margin-left:2.5em;
+}
+ul.medium li {
+  font-size:40px;
+  list-style-type:square;
+}
+
+/* Code */
+
+pre {
+  padding:5px;
+  font-size:28px;
+}
+
+pre code {
+  outline:none;
+}
+
+p.codepen {
+	position:relative;
+	z-index:10;
+}
+
+.glow {
+  filter:drop-shadow(0 0 6px #FFF)
+}
+
+/* Code for put slides */
+/* .flex > .item + .item */
+
+.flex {
+  display:flex;
+  justify-content:space-between;
+  .item {
+    flex-grow:1;
+  }
+  .item:last-child {
+    margin-left:0.2em;
+  }
+  .item:first-child {
+    margin-right:0.2em;
+  }
+}
+
+.flex.center .item {
+  text-align:center
+}
+
+.flex.bottom {
+	align-items:flex-end;
+}
+
+.ib {
+  display:inline-block
+}
+
+.transleft {
+  position:relative;
+  z-index:-5;
+  left:-75px;
+  opacity:0.05;
+}
+
+.fl { float:left }
+.w135 { width:135px }
+
+/* Code base */
+
+pre code {
+	letter-spacing:-1.5px;
+}
+
+pre.command-line::before {
+  content: "$ ";
+}
+pre.command-line {
+  background:#000!important;
+  border-left:8px solid #731f1f;
+  font-size:26px;
+  border-radius:0 10px 10px 0!important
+}
+
+/* Slide: Quagmire animation */
+#quagmire {
+	height:300px;
+	background:url(../img/quagmire-body.png) no-repeat 0 130px;
+
+	#face {
+	  width:150px;
+	  margin:25px;
+		-webkit-animation:facemove 1s ease 0.1s infinite alternate;
+	          animation:facemove 1s ease 0.1s infinite alternate;
+	}
+}
+
+@-webkit-keyframes facemove {
+  0%, 100% {
+    -webkit-transform: translate(0,0);
+            transform: translate(0,0);
+  }
+  50% {
+    -webkit-transform: translate(20px, 5px);
+            transform: translate(20px, 5px);
+  }
+}
+
+@keyframes facemove {
+  0%, 100% {
+    -webkit-transform: translate(0,0);
+            transform: translate(0,0);
+  }
+  50% {
+    -webkit-transform: translate(20px, 5px);
+            transform: translate(20px, 5px);
+  }
+}
+
+/* Slide: Flex star wars example */
+
+#falcon {
+  width:800px;
+  margin:auto;
+  min-height:240px;
+  background:#AAA;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+
+  &.jcc { justify-content:center }
+  &.aic { align-items:center }
+
+  div {
+    width:150px;
+    height:100px;
+    margin:5px;
+    background:blue;
+    text-align:center;
+    font-family:consolas;
+    font-size:30px;
+    line-height:300%;
+  }
+
+  #luke {
+    background:-webkit-linear-gradient(#8b6e5a 25%, #f5e7e5 25%);
+    background:linear-gradient(#8b6e5a 25%, #f5e7e5 25%)
+  }
+  #leia {
+    background:-webkit-linear-gradient(#331f24 25%, #fff6e6 25%);
+    background:linear-gradient(#331f24 25%, #fff6e6 25%)
+  }
+  #solo {
+    background:-webkit-linear-gradient(right, #190f17 25%, #f0dbd1 25%,75%, #190f17 75%);
+    background:linear-gradient(to left, #190f17 25%, #f0dbd1 25%,75%, #190f17 75%)
+  }
+  #chewy {
+    background:-webkit-linear-gradient(115deg, #5e473c 50%, #f6f1f3 50%,55%, #5e473c 55%);
+    background:linear-gradient(-25deg, #5e473c 50%, #f6f1f3 50%,55%, #5e473c 55%)
+  }
+}
