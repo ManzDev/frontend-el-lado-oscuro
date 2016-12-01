@@ -60,3 +60,7 @@ Framework utilizado para crear la presentación: [Impress.js](https://github.com
 ### Contacto
 - [http://twitter.com/Manz](http://twitter.com/Manz)
 - [http://www.emezeta.com/](http://www.emezeta.com/)
+
+### Colaboraciones
+
+- Colaboración de [@DanielRamosAcosta](https://github.com/DanielRamosAcosta), con una ejemplificación de las herramientas mostradas en la charla: [https://github.com/DanielRamosAcosta/herramientas-frontend](https://github.com/DanielRamosAcosta/herramientas-frontend)
