@@ -28,6 +28,8 @@ Framework utilizado para crear la presentación: [Impress.js](https://github.com
 - BabelJS (Transpiler JSES6 -> JSES5): [https://babeljs.io/](https://babeljs.io/)
 - Tabla de compatibilidad con ES5/6/7: [ES6 Kangax Compat-table](http://kangax.github.io/compat-table/es6/)
 
+### Minificadores
+
 - Benchmark CSS: [https://goalsmashers.github.io/css-minification-benchmark/](https://goalsmashers.github.io/css-minification-benchmark/)
 - Minificador CSS: [https://github.com/jakubpawlowicz/clean-css](https://github.com/jakubpawlowicz/clean-css)
 - Minificador JS: [https://github.com/mishoo/UglifyJS2](https://github.com/mishoo/UglifyJS2)
