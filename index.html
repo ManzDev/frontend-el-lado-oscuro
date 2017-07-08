@@ -8,12 +8,12 @@
   <meta name="description" content="Front-end: En los últimos años el mundo del front-end ha avanzado y se ha complicado muchísimo, ¿cómo vencer ese lado oscuro?">
   <meta name="author" content="Manz">
   <!-- Relaciones-->
-  <!--link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic")-->
+  <!--link(rel="stylesheet",href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic")-->
   <link rel="stylesheet" href="css/impress.base.min.css">
   <link rel="stylesheet" href="css/darkgrey.theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css">
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="img/favicon.png">
 </head>
 <body>
   <!-- Fallback (navegadores no compatibles)-->
@@ -22,11 +22,12 @@
   </div>
   <!-- Comenzamos impress.js-->
   <div id="impress">
+    <!-- Cada .step es un slide-->
     <div id="start" data-x="0" data-y="0" class="step darth">
       <h1>Front-end</h1>
       <h4>El lado oscuro</h4>
       <div style="margin-top:2.5em">
-        <p class="medium">Por <span class="red">@Manz</span></p>
+        <p class="medium">Por <span class="green">@Manz</span></p>
         <p style="line-height:10%" class="medium"><a href="http://twitter.com/Manz">twitter.com/Manz</a></p>
       </div>
     </div>
@@ -96,15 +97,15 @@
       <div class="hidden">
         <p>Definición de CSS</p>
         <video loop src="img/css-ie.mp4" class="photo">
-          <!--img.photo(src="img/css-ie.gif")-->
+          <!--img.photo(src="img/css-ie.gif") // fallback-->
         </video><img src="img/ie.png" class="transleft">
       </div>
     </div>
     <div id="safaricss" data-x="3000" data-y="1200" class="step">
       <div class="hidden">
-        <p>Definición de CSS <span class="blue">(Edición 2016)</span></p>
+        <p>Definición de CSS <span class="blue">(Edición 2017)</span></p>
         <video loop src="img/css-safari.mp4" class="photo">
-          <!--img.photo(src="img/css-safari.gif")-->
+          <!--img.photo(src="img/css-safari.gif") // fallback-->
         </video><img src="img/safari.png" class="transleft">
       </div>
     </div>
@@ -183,7 +184,7 @@
   50% { transform: translate(20px, 5px) }
 }
 .face {
-  animation: facemove 1s ease 
+  animation: facemove 1s ease
              0.1s 5 alternate;
 }
 </code></pre>
@@ -223,7 +224,7 @@
         <pre><code class="language-css">#falcon {
   width:500px;
   display:flex;
-}      </code></pre>
+}</code></pre>
         <div id="falcon">
           <div>#luke</div>
           <div>#leia</div>
@@ -238,7 +239,7 @@
   width:500px;
   display:flex;
   justify-content:center;
-}      </code></pre>
+}</code></pre>
         <div id="falcon" class="jcc">
           <div>#luke</div>
           <div>#leia</div>
@@ -254,7 +255,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
-}       </code></pre>
+}</code></pre>
         <div id="falcon" class="jcc aic">
           <div>#luke</div>
           <div>#leia</div>
@@ -265,19 +266,82 @@
     </div>
     <div id="modulo-flex-ejemplo4" data-x="5200" data-y="4300" data-z="400" class="step">
       <div class="hidden">
-        <pre class="xsmall"><code class="language-css">#luke { background:linear-gradient(#8b6e5a 25%, 
+        <pre class="xsmall"><code class="language-css">#luke { background:linear-gradient(#8b6e5a 25%,
                                    #f5e7e5 25%) }
-#leia { background:linear-gradient(#331f24 25%, 
+#leia { background:linear-gradient(#331f24 25%,
                                    #fff6e6 25%) }
-#solo { background:linear-gradient(to left, #190f17 25%, 
+#solo { background:linear-gradient(to left, #190f17 25%,
                            #f0dbd1 25%,75%, #190f17 75%) }
-#chewy { background:linear-gradient(-25deg, #5e473c 50%, 
+#chewy { background:linear-gradient(-25deg, #5e473c 50%,
                            #f6f1f3 50%,55%, #5e473c 55%) }</code></pre>
         <div id="falcon" class="jcc aic">
           <div id="luke"></div>
           <div id="leia"></div>
           <div id="solo"></div>
           <div id="chewy"></div>
+        </div>
+      </div>
+    </div>
+    <div id="modulo-css-grid" data-x="5200" data-y="4300" data-rotate-y="0" data-z="500" class="step">
+      <div class="hidden"><a href="https://codepen.io/manz/pen/QgZyjV"><img src="img/css-grid.png" alt="CSS Grid"></a>
+        <div class="flex">
+          <div class="item">
+            <pre class="xsmall"><code class="language-html">&lt;div class="grid"&gt;
+  &lt;div class="a"&gt;&lt;/div&gt;
+  &lt;div class="b"&gt;&lt;/div&gt;
+  &lt;div class="c"&gt;&lt;/div&gt;
+  &lt;div class="d"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="item">
+            <pre class="xxsmall"><code class="language-css">.grid {
+  display:grid;
+  grid-template-columns: 25% 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+}</code></pre>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="grid-1">
+            <div class="a">25%</div>
+            <div class="b">1fr</div>
+            <div class="c">1fr</div>
+            <div class="d"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modulo-css-grid-areas" data-x="5200" data-y="4300" data-rotate-y="0" data-z="600" class="step">
+      <div class="hidden"><a href="https://codepen.io/manz/pen/XgxXbv"><img src="img/css-grid.png" alt="CSS Grid"></a>
+        <div class="flex">
+          <div class="item">
+            <pre class="xxsmall"><code class="language-html">&lt;div class="grid"&gt;
+  &lt;div class="a"&gt;Head&lt;/div&gt;
+  &lt;div class="b"&gt;Menú&lt;/div&gt;
+  &lt;div class="c"&gt;Main&lt;/div&gt;
+  &lt;div class="d"&gt;Foot&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="item">
+            <pre class="xxsmall"><code class="language-css">.grid {
+  display:grid;
+  grid-template-areas: "head head"
+                       "menu main"
+                       "foot foot";
+}
+.a { grid-area:head; background:blue }
+.b { grid-area:menu; background:red }
+.c { grid-area:main; background:green }
+.d { grid-area:foot; background:orange }</code></pre>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="grid-2">
+            <div class="a">Head</div>
+            <div class="b">Menu</div>
+            <div class="c">Main</div>
+            <div class="d">Foot          </div>
+          </div>
         </div>
       </div>
     </div>
@@ -341,10 +405,16 @@
         <p class="small grey">Soporte de filtros CSS en diferentes navegadores</p><img src="img/caniuse-filter-css.png" alt="CanIUse: Filter CSS">
       </div>
     </div>
-    <div id="caniuse-grid-css" data-x="4900" data-y="4000" data-rotate="90" class="step">
+    <div id="caniuse-grid-css-2016" data-x="4900" data-y="4000" data-rotate="90" class="step">
       <div class="hidden">
         <h5>CanIUse: Grid CSS (<span class="grey">IE & Edge!!</span>)</h5>
         <p class="small grey">Captura de pantalla histórica</p><img src="img/caniuse-grid-css.png" alt="CanIUse: Grid CSS">
+      </div>
+    </div>
+    <div id="caniuse-grid-css-2017" data-x="4900" data-y="4000" data-rotate="190" class="step">
+      <div class="hidden">
+        <h5>CanIUse: Grid CSS (<span class="grey">2017</span>)</h5>
+        <p class="small grey">Soporte en la actualidad</p><img src="img/caniuse-grid-css-2017.png" alt="CanIUse: Grid CSS">
       </div>
     </div>
     <div id="preprocesadores" data-x="4200" data-y="5000" class="step">
@@ -488,8 +558,8 @@ ul
         <div class="flex">
           <div class="item">
             <h3>LESS</h3>
-            <p class="small grey">Mixins paramétricos          </p>
-            <pre><code class="language-less">.mixin (@bg: #222, 
+            <p class="small grey">Mixins paramétricos</p>
+            <pre><code class="language-less">.mixin (@bg: #222,
         @color: #FFF) {
   background:@bg;
   color:@color;
@@ -522,12 +592,12 @@ ul
       <div class="flex">
         <div class="item">
           <video loop src="img/html-css-js.mp4" alt="HTML, CSS, JS" class="photo"></video>
-          <!--img.photo(src="img/html-css-js.gif", alt="HTML, CSS, JS")-->
+          <!--img.photo(src="img/html-css-js.gif", alt="HTML, CSS, JS")   // fallback-->
         </div>
         <div class="item"><br>
           <ul class="medium">
             <li>ECMAScript (ES)</li>
-            <li>¿Crossbrowser?         </li>
+            <li>¿Crossbrowser?</li>
             <li>↑ Complejidad</li>
             <li>↑ Trabajo</li>
           </ul>
@@ -538,21 +608,21 @@ ul
       <div>
         <h2>ES5</h2>
         <p class="grey">ECMAScript5 (Dic/2009)</p><img src="img/chrome.png" alt="Chrome" class="w135 gray"><img src="img/firefox.png" alt="Firefox" class="w135 gray"><img src="img/ie.png" alt="Internet Explorer" class="w135 gray"><img src="img/edge.png" alt="Edge" class="w135 gray"><img src="img/safari.png" alt="Safari" class="w135 gray"><img src="img/opera.png" alt="Opera" class="w135 gray">
-        <p class="large green"><span class="small grey">CH54</span>99% <span class="small grey">FF50</span>100% <span class="small grey">IE11</span>99% <span class="small grey">ED14</span>100% <span class="small grey">SF10</span>98% <span class="small grey">OP41</span>99%</p>
+        <p class="large dgreen"><span class="small grey">CH59</span>98% <span class="small grey">FF52</span><span class="green">100%</span> <span class="small grey">IE11</span>99% <span class="small grey">ED14</span><span class="green">100%</span> <span class="small grey">SF10</span>97% <span class="small grey">OP46</span>98%</p>
       </div>
     </div>
     <div id="es6-browsers" data-x="6400" data-y="6200" data-scale="0.5" class="step">
       <div>
         <h2>ES6</h2>
         <p class="grey">ECMAScript6 (Jun/2015)</p><img src="img/chrome.png" alt="Chrome" class="w135 gray"><img src="img/firefox.png" alt="Firefox" class="w135 gray"><img src="img/ie.png" alt="Internet Explorer" class="w135 gray"><img src="img/edge.png" alt="Edge" class="w135 gray"><img src="img/safari.png" alt="Safari" class="w135 gray"><img src="img/opera.png" alt="Opera" class="w135 gray">
-        <p class="large green"><span class="small grey">CH54</span>97% <span class="small grey">FF50</span><span class="yellow">92%</span> <span class="small grey">IE11</span><span class="red">11%</span> <span class="small grey">ED14</span><span class="yellow">93%</span> <span class="small grey">SF10</span>100% <span class="small grey">OP41</span>97%</p>
+        <p class="large green"><span class="small grey">CH59</span>97% <span class="small grey">FF52</span><span class="orange">94%</span> <span class="small grey">IE11</span><span class="red">11%</span> <span class="small grey">ED14</span><span class="orange">93%</span> <span class="small grey">SF10</span>99% <span class="small grey">OP46</span>97%</p>
       </div>
     </div>
     <div id="es7-browsers" data-x="6400" data-y="6500" data-scale="0.5" class="step">
       <div>
         <h2>ES7 (2016+)</h2>
         <p class="grey">ECMAScript7 (En desarrollo)</p><img src="img/chrome.png" alt="Chrome" class="w135 gray"><img src="img/firefox.png" alt="Firefox" class="w135 gray"><img src="img/ie.png" alt="Internet Explorer" class="w135 gray"><img src="img/edge.png" alt="Edge" class="w135 gray"><img src="img/safari.png" alt="Safari" class="w135 gray"><img src="img/opera.png" alt="Opera" class="w135 gray">
-        <p class="large orange"><span class="small grey">CH54</span>55% <span class="small grey">FF50</span>50% <span class="small grey">IE11</span><span class="red">4%</span> <span class="small grey">ED14</span>52% <span class="small grey">SF10</span><span class="red">44%</span> <span class="small grey">OP41</span>55%</p>
+        <p class="large orange"><span class="small grey">CH59</span>83% <span class="small grey">FF52</span>79% <span class="small grey">IE11</span><span class="red">3%</span> <span class="small grey">ED14</span><span class="red">41%</span> <span class="small grey">SF10</span><span class="red">41%</span> <span class="small grey">OP46</span>83%</p>
       </div>
     </div>
     <div id="babel-js" data-x="6400" data-y="7200" class="step">
@@ -729,9 +799,9 @@ font-weight:400;color:red;z-index:1} /* 79 bytes */
       100% { transform: translateY(50px) }
     }
     .body {
-      animation: move 1.5s linear 
+      animation: move 1.5s linear
                  infinite alternate;
-    }  
+    }
   &lt;/style&gt;
   ...
 &lt;/svg&gt;</code></pre>
@@ -749,7 +819,7 @@ font-weight:400;color:red;z-index:1} /* 79 bytes */
           </div>
           <div class="item">
             <video loop src="img/holy-shit.mp4" alt="Holy Shit!" class="photo"></video>
-            <!--img.photo(src="img/holy-shit.gif", alt="Holy shit!")-->
+            <!--img.photo(src="img/holy-shit.gif", alt="Holy shit!")  // fallback-->
           </div>
         </div>
         <pre class="command-line language-bash"><code>svgo logo.svg -p 2 -o logo.min.svg <br><br>Done in 85 ms! <br>8.14 KiB - <span class="green">81%</span> = 1.5 KiB</code></pre>
@@ -923,7 +993,7 @@ gulp.task('css', function() {
         </div>
       </div>
     </div>
-    <!--div#overview.step(data-x="5800", data-y="3400", data-scale="12")-->
+    <!--div#overview.step(data-x="5800", data-y="3400", data-scale="12")  // last slide-->
   </div>
   <!-- Sugerencia inicial-->
   <div class="hint">
@@ -932,8 +1002,8 @@ gulp.task('css', function() {
   <div id="upbar">
     <div style="width:0%" class="fill"></div>
   </div>
-  <script src="js/impress-substep.min.js"></script>
-  <!--script(src="js/impress.min.js")-->
+  <!--script(src="https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js")  // original impress.js-->
+  <script src="js/impress-substep.min.js"> // impress.js with substeps (for browser slides)</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-jade.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-less.min.js"></script>
@@ -954,26 +1024,25 @@ gulp.task('css', function() {
     document.addEventListener('impress:stepenter', function(e, s = slides, f = factor) {
       var currentStep = document.querySelector('.active[id]').id;
       var current = (s.indexOf(currentStep) * 100) / s.length;
-      
+    
       var video = document.querySelector('#' + currentStep + ' video');
       if (video)
         video.play();
-      
+    
     }, false);
     
     document.addEventListener('impress:stepleave', function(e, s = slides, f = factor) {
       var currentStep = document.querySelector('.active[id]').id;
       var current = (s.indexOf(currentStep) * 100) / s.length;
     
-      //console.log(currentStep, s.indexOf(currentStep), current, s.length);
       // Lightsaber control
       setFill(current);
     }, false);
     
     window.addEventListener('keydown', function() {
-      if (event.keyCode == 36)  // home
+      if (event.keyCode == 36)  // home slide
         impress().goto(0);
-      if (event.keyCode == 35)  // end
+      if (event.keyCode == 35)  // end slide
         impress().goto('ending');
     });
   </script>

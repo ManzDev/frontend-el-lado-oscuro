@@ -110,7 +110,7 @@ body
 
     div#safaricss.step(data-x="3000", data-y="1200")
       div.hidden
-        p Definición de CSS #[span.blue (Edición 2016)]
+        p Definición de CSS #[span.blue (Edición 2017)]
         video.photo(loop, src="img/css-safari.mp4")
           //img.photo(src="img/css-safari.gif") // fallback
         img.transleft(src="img/safari.png")
@@ -146,7 +146,7 @@ body
               p IE
               p.blue Microsoft
             div.substep.gray(style="transform:translate(-5px,-265px); position:relative;z-index:4")
-              img(src="img/ie.png", alt="Internet Explorer")              
+              img(src="img/ie.png", alt="Internet Explorer")
           .item.substep.gray
             img(src="img/edge.png", alt="Edge")
             p Edge
@@ -182,7 +182,7 @@ body
     div#modulo-animaciones.step(data-x="3200", data-y="4300", data-rotate-y="90")
       div
         a(href="https://codepen.io/manz/pen/xOGNRP")
-          img(src="img/animation-css.png", alt="Animation CSS")      
+          img(src="img/animation-css.png", alt="Animation CSS")
         pre
           code.language-css.
             @keyframes facemove {
@@ -190,10 +190,10 @@ body
               50% { transform: translate(20px, 5px) }
             }
             .face {
-              animation: facemove 1s ease 
+              animation: facemove 1s ease
                          0.1s 5 alternate;
             }
-            
+
     div#modulo-animaciones-ejemplo1.step(data-x="3900", data-y="4300", data-rotate-y="90")
       div.hidden
         div#quagmire
@@ -223,7 +223,7 @@ body
           div #leia
           div #solo
           div #chewy
-    
+
     div#modulo-flex-ejemplo1.step(data-x="5200", data-y="4300", data-z="100")
       div.hidden
         pre
@@ -231,13 +231,13 @@ body
             #falcon {
               width:500px;
               display:flex;
-            }      
+            }
         div#falcon
           div #luke
           div #leia
           div #solo
           div #chewy
-          
+
     div#modulo-flex-ejemplo2.step(data-x="5200", data-y="4300", data-z="200")
       div.hidden
         pre
@@ -246,13 +246,13 @@ body
               width:500px;
               display:flex;
               justify-content:center;
-            }      
+            }
         div#falcon.jcc
           div #luke
           div #leia
           div #solo
           div #chewy
-          
+
     div#modulo-flex-ejemplo3.step(data-x="5200", data-y="4300", data-z="300")
       div.hidden
         pre
@@ -262,7 +262,7 @@ body
               display:flex;
               justify-content:center;
               align-items:center;
-            }       
+            }
         div#falcon.jcc.aic
           div #luke
           div #leia
@@ -273,19 +273,82 @@ body
       div.hidden
         pre.xsmall
           code.language-css.
-            #luke { background:linear-gradient(#8b6e5a 25%, 
+            #luke { background:linear-gradient(#8b6e5a 25%,
                                                #f5e7e5 25%) }
-            #leia { background:linear-gradient(#331f24 25%, 
+            #leia { background:linear-gradient(#331f24 25%,
                                                #fff6e6 25%) }
-            #solo { background:linear-gradient(to left, #190f17 25%, 
+            #solo { background:linear-gradient(to left, #190f17 25%,
                                        #f0dbd1 25%,75%, #190f17 75%) }
-            #chewy { background:linear-gradient(-25deg, #5e473c 50%, 
+            #chewy { background:linear-gradient(-25deg, #5e473c 50%,
                                        #f6f1f3 50%,55%, #5e473c 55%) }
         div#falcon.jcc.aic
           div#luke
           div#leia
           div#solo
           div#chewy
+            
+    div#modulo-css-grid.step(data-x="5200", data-y="4300", data-rotate-y="0", data-z="500")
+      div.hidden
+        a(href="https://codepen.io/manz/pen/QgZyjV")
+          img(src="img/css-grid.png", alt="CSS Grid")
+        div.flex
+          div.item
+            pre.xsmall
+              code.language-html.
+                &lt;div class="grid"&gt;
+                  &lt;div class="a"&gt;&lt;/div&gt;
+                  &lt;div class="b"&gt;&lt;/div&gt;
+                  &lt;div class="c"&gt;&lt;/div&gt;
+                  &lt;div class="d"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+          div.item
+            pre.xxsmall
+              code.language-css.
+                .grid {
+                  display:grid;
+                  grid-template-columns: 25% 1fr 1fr;
+                  grid-template-rows: 50vh 50vh;
+                }
+        div.grid-container
+          div.grid-1
+            div.a 25%
+            div.b 1fr
+            div.c 1fr
+            div.d
+              
+    div#modulo-css-grid-areas.step(data-x="5200", data-y="4300", data-rotate-y="0", data-z="600")
+      div.hidden
+        a(href="https://codepen.io/manz/pen/XgxXbv")
+          img(src="img/css-grid.png", alt="CSS Grid")
+        div.flex
+          div.item
+            pre.xxsmall
+              code.language-html.
+                &lt;div class="grid"&gt;
+                  &lt;div class="a"&gt;Head&lt;/div&gt;
+                  &lt;div class="b"&gt;Menú&lt;/div&gt;
+                  &lt;div class="c"&gt;Main&lt;/div&gt;
+                  &lt;div class="d"&gt;Foot&lt;/div&gt;
+                &lt;/div&gt;
+          div.item
+            pre.xxsmall
+              code.language-css.
+                .grid {
+                  display:grid;
+                  grid-template-areas: "head head"
+                                       "menu main"
+                                       "foot foot";
+                }
+                .a { grid-area:head; background:blue }
+                .b { grid-area:menu; background:red }
+                .c { grid-area:main; background:green }
+                .d { grid-area:foot; background:orange }
+        div.grid-container
+          div.grid-2
+            div.a Head
+            div.b Menu
+            div.c Main
+            div.d Foot          
 
     div#css-specs.step(data-x="3200", data-y="4800", data-rotate="-90")
       div.hidden
@@ -343,18 +406,25 @@ body
         a(href="http://caniuse.com/")
           img(src="img/caniuse.png", alt="Can I Use")
         p.medium Can I use: ¿Qué puedo usar en #[span.red X] navegador?
-    
+
     div#caniuse-filter-css.step(data-x="4600", data-y="4000", data-rotate="0")
       div.hidden
         h5 CanIUse: Filtros CSS
         p.small.grey Soporte de filtros CSS en diferentes navegadores
         img(src="img/caniuse-filter-css.png", alt="CanIUse: Filter CSS")
-        
-    div#caniuse-grid-css.step(data-x="4900", data-y="4000", data-rotate="90")
+
+    div#caniuse-grid-css-2016.step(data-x="4900", data-y="4000", data-rotate="90")
       div.hidden
         h5 CanIUse: Grid CSS (#[span.grey IE & Edge!!])
         p.small.grey Captura de pantalla histórica
         img(src="img/caniuse-grid-css.png", alt="CanIUse: Grid CSS")
+
+    div#caniuse-grid-css-2017.step(data-x="4900", data-y="4000", data-rotate="190")
+      div.hidden
+        h5 CanIUse: Grid CSS (#[span.grey 2017])
+        p.small.grey Soporte en la actualidad
+        img(src="img/caniuse-grid-css-2017.png", alt="CanIUse: Grid CSS")
+
 
     div#preprocesadores.step(data-x="4200", data-y="5000")
       h3 Preprocesadores
@@ -506,10 +576,10 @@ body
         div.flex
           div.item
             h3 LESS
-            p.small.grey Mixins paramétricos          
+            p.small.grey Mixins paramétricos
             pre
               code.language-less.
-                .mixin (@bg: #222, 
+                .mixin (@bg: #222,
                         @color: #FFF) {
                   background:@bg;
                   color:@color;
@@ -544,7 +614,7 @@ body
           br
           ul.medium
             li ECMAScript (ES)
-            li ¿Crossbrowser?         
+            li ¿Crossbrowser?
             li ↑ Complejidad
             li ↑ Trabajo
 
@@ -558,7 +628,7 @@ body
         img.w135.gray(src="img/edge.png", alt="Edge")
         img.w135.gray(src="img/safari.png", alt="Safari")
         img.w135.gray(src="img/opera.png", alt="Opera")
-        p.large.green #[span.small.grey CH54]99% #[span.small.grey FF50]100% #[span.small.grey IE11]99% #[span.small.grey ED14]100% #[span.small.grey SF10]98% #[span.small.grey OP41]99%
+        p.large.dgreen #[span.small.grey CH59]98% #[span.small.grey FF52]#[span.green 100%] #[span.small.grey IE11]99% #[span.small.grey ED14]#[span.green 100%] #[span.small.grey SF10]97% #[span.small.grey OP46]98%
 
     div#es6-browsers.step(data-x="6400", data-y="6200", data-scale="0.5")
       div
@@ -570,7 +640,7 @@ body
         img.w135.gray(src="img/edge.png", alt="Edge")
         img.w135.gray(src="img/safari.png", alt="Safari")
         img.w135.gray(src="img/opera.png", alt="Opera")
-        p.large.green #[span.small.grey CH54]97% #[span.small.grey FF50]#[span.yellow 92%] #[span.small.grey IE11]#[span.red 11%] #[span.small.grey ED14]#[span.yellow 93%] #[span.small.grey SF10]100% #[span.small.grey OP41]97%
+        p.large.green #[span.small.grey CH59]97% #[span.small.grey FF52]#[span.orange 94%] #[span.small.grey IE11]#[span.red 11%] #[span.small.grey ED14]#[span.orange 93%] #[span.small.grey SF10]99% #[span.small.grey OP46]97%
 
     div#es7-browsers.step(data-x="6400", data-y="6500", data-scale="0.5")
       div
@@ -582,7 +652,7 @@ body
         img.w135.gray(src="img/edge.png", alt="Edge")
         img.w135.gray(src="img/safari.png", alt="Safari")
         img.w135.gray(src="img/opera.png", alt="Opera")
-        p.large.orange #[span.small.grey CH54]55% #[span.small.grey FF50]50% #[span.small.grey IE11]#[span.red 4%] #[span.small.grey ED14]52% #[span.small.grey SF10]#[span.red 44%] #[span.small.grey OP41]55%
+        p.large.orange #[span.small.grey CH59]83% #[span.small.grey FF52]79% #[span.small.grey IE11]#[span.red 3%] #[span.small.grey ED14]#[span.red 41%] #[span.small.grey SF10]#[span.red 41%] #[span.small.grey OP46]83%
 
     div#babel-js.step(data-x="6400", data-y="7200")
       h3 BabelJS → JS
@@ -617,7 +687,7 @@ body
         h3 Minifiers
         p.medium Reducir tamaño (#[span.grey condensar espacio innecesario])
         img(src="img/preprocess-minify.png", alt="Minificadores (Minify HTML, JS, CSS)", style="width:800px")
-        
+
     div#minify-css-js-html.step(data-x="7000", data-y="3000", data-scale="0.5")
       div
         h5 CleanCSS #[a.xsmall(href="https://goalsmashers.github.io/css-minification-benchmark/") CSS Minify Benchmark]
@@ -770,9 +840,9 @@ body
                       100% { transform: translateY(50px) }
                     }
                     .body {
-                      animation: move 1.5s linear 
+                      animation: move 1.5s linear
                                  infinite alternate;
-                    }  
+                    }
                   &lt;/style&gt;
                   ...
                 &lt;/svg&gt;
@@ -788,10 +858,10 @@ body
           div.item
             video.photo(loop, src="img/holy-shit.mp4", alt="Holy Shit!")
             //img.photo(src="img/holy-shit.gif", alt="Holy shit!")  // fallback
-        
+
         pre.command-line.language-bash
           code svgo logo.svg -p 2 -o logo.min.svg #[br]#[br]Done in 85 ms! #[br]8.14 KiB - #[span.green 81%] = 1.5 KiB
-        
+
         h5 PNG/#[span.red 39KB] · SVG/#[span.orange 8KB] · SVG optimizado/#[span.green 1.5KB]
 
     div#atom-scheme.step(data-x="9300", data-y="2800")
@@ -982,15 +1052,15 @@ body
     function setFill(i) {
       fill.style.width = parseInt(i) + '%';
     }
-    
+
     document.addEventListener('impress:stepenter', function(e, s = slides, f = factor) {
       var currentStep = document.querySelector('.active[id]').id;
       var current = (s.indexOf(currentStep) * 100) / s.length;
-      
+
       var video = document.querySelector('#' + currentStep + ' video');
       if (video)
         video.play();
-      
+
     }, false);
 
     document.addEventListener('impress:stepleave', function(e, s = slides, f = factor) {

@@ -131,6 +131,8 @@ img.small {
 .red { color:#b92e2e }
 .blue { color:#5d73eb }
 .green { color:#21802d }
+.lgreen { color:#69e969 }
+.dgreen { color:#0f4b0f }
 .grey { color:#999999 }
 .white { color:#FFFFFF }
 .yellow { color:#e4e220 }
@@ -347,4 +349,42 @@ pre.command-line {
     background:-webkit-linear-gradient(115deg, #5e473c 50%, #f6f1f3 50%,55%, #5e473c 55%);
     background:linear-gradient(-25deg, #5e473c 50%, #f6f1f3 50%,55%, #5e473c 55%)
   }
+}
+
+/* Slide: CSS Grid example */
+
+.grid-container {
+	background:white;
+}
+
+.grid-1 {
+	display:grid;
+	height:300px;
+  grid-template-columns: 25% 1fr 1fr;
+  grid-template-rows: 50% 50%;
+}
+
+.grid-1 div {
+  background:#AAA;
+  border:1px solid #999;
+	color:navy;
+	text-align:center;
+	padding-top:.6em;
+	font-family:Montserrat;
+}
+
+.grid-2 {
+	display:grid;
+	grid-template-areas: "head head"
+											 "menu main"
+											 "foot foot";
+  font-family:Montserrat;
+	font-size:26px;
+}
+
+.grid-2 {
+	.a { grid-area:head; background:blue }
+	.b { grid-area:menu; background:red }
+	.c { grid-area:main; background:green }
+	.d { grid-area:foot; background:orange }
 }
